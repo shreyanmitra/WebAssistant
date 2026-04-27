@@ -1,2 +1,19 @@
-OPENAI_API_KEY = "Your API Key"
-URL = "Your website URL"
+# Website to index by default (query param siteUrl can override this per request)
+URL = "https://example.com"
+
+# Provider: ollama (default) or openai
+LLM_PROVIDER = "ollama"
+
+# OpenAI settings (required only when LLM_PROVIDER=openai)
+OPENAI_API_KEY = ""
+OPENAI_MODEL = "gpt-4o"
+OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
+
+# Ollama settings (used when LLM_PROVIDER=ollama)
+# If OLLAMA_BASE_URL is not set and OPEN_WEBUI_URL is set, server will use OPEN_WEBUI_URL + /ollama
+OLLAMA_BASE_URL = "http://127.0.0.1:11434"
+OLLAMA_MODEL = "llama3.1:8b"
+OLLAMA_EMBEDDING_MODEL = "nomic-embed-text"
+
+# Optional Open WebUI URL for Ollama proxy, e.g. http://localhost:3000
+OPEN_WEBUI_URL = ""

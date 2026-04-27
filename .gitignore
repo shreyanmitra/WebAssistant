@@ -1,3 +1,4 @@
 AppTemplate/server/.env
 AppTemplate/client/node_modules
 AppTemplate/server/node_modules
+__pycache__/
